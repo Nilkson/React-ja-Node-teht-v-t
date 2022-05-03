@@ -3,9 +3,16 @@ import Button from './Button';
 
 const Footer = () => {
   return (
-    <div class = "footer">
-      <Button icon={brokenheart}/>
-      <Button icon={heart}/>
+    <div className="footer">
+      <div className="row">
+        <a href="https://reactjs.org/" target="_blank">
+          <Button icon="heart" icon2="far fa-heart" />
+        </a>
+        <a href="https://www.w3schools.com/react/react_props.asp"
+          target="_blank">
+          <Button icon="heart-broken" icon2="fas fa-heart-broken" />
+        </a>
+      </div>
     </div>
   );
 };
