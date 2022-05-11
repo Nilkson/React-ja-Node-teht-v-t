@@ -40,6 +40,15 @@ main {
 }
 .row {
   width: 100%;
+  text-align: center;
+}
+#petCard {
+  background-color: gray;
+}
+
+#petCard img {
+  width: 800px;
+  height: 600px;
 }
 .heart {
   background-color: rgb(2, 174, 16);

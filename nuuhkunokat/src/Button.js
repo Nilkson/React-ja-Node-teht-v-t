@@ -1,17 +1,15 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from "@fortawesome/free-solid-svg-icons";
-import { faHeartBroken, faHeart } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, fas)
+library.add(fas)
 
-const Button = ({ icon, icon2 }) => {
+const Button = ({ icon, onClick }) => {
+  console.log("buttonin ikoni " + {icon});
   return (
-    <div className={icon} >
+    <div className={icon} onClick={onClick}>
         <FontAwesomeIcon icon={icon} />
-        {/* <i className={`fas fa-3x fa-${icon}`}></i> */}
     </div>
   );
 };
