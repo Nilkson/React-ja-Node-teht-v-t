@@ -36,8 +36,8 @@ const App = () => {
     
   }
 
-  console.log("state " + state);
-  console.log("indeksi " + index);
+  console.log("state ", state);
+  console.log("indeksi ", index);
 
   const handleClick = () => {
     if (index < pets.length) {

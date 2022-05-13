@@ -6,7 +6,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 library.add(fas)
 
 const Button = ({ icon, onClick }) => {
-  console.log("buttonin ikoni " + {icon});
+  console.log("buttonin ikoni ", {icon});
   return (
     <div className={icon} onClick={onClick}>
         <FontAwesomeIcon icon={icon} />
