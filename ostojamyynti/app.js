@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser';
 import pages from './routes/page.routes.js';
 import register from './routes/register.routes.js';
 import auth from './routes/auth.routes.js';
+import hbsHelpers from './helpers/handlebars-helpers.js';
 
 dotenv.config();
 
@@ -21,7 +22,10 @@ const app = express();
 
 app.use(express.static('public'));
 
-const hbs = create({ extname: '.hbs' });
+const hbs = create({ 
+    extname: '.hbs',
+    helpers: hbsHelpers
+});
 
 app.engine('hbs', hbs.engine);
 
