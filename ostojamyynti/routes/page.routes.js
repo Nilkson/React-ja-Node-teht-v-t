@@ -1,6 +1,11 @@
 import express from 'express';
 import { isLoggedIn } from '../controllers/auth.controller.js';
-import newAdvert, { listAdverts, listUserAdverts } from '../controllers/advert.controller.js';
+import newAdvert, { 
+    listAdverts, 
+    listUserAdverts, 
+    updateAdvert,
+    getAdvert, 
+    deleteAdvert} from '../controllers/advert.controller.js';
 import { listUsers } from '../controllers/user.controller.js';
 
 
@@ -10,9 +15,21 @@ routes.get('/', [ isLoggedIn, listAdverts, listUsers ], (req, res) => {
     res.render('index', {
         user: req.user,
         users: req.users,
-        list: req.list
+        list: req.list,
+        searchAdvert: req.searchAdvert
     });
 });
+
+routes.post('/', [ isLoggedIn, listAdverts, listUsers ], (req, res) => {
+    res.render('index', {
+        user: req.user,
+        users: req.users,
+        list: req.list,
+        searchAdvert: req.searchAdvert
+    });
+});
+
+
 
 routes.get('/login', (req, res) => {
     res.render('login')
@@ -43,5 +60,33 @@ routes.post('/newAdvert', [isLoggedIn, newAdvert], (req, res) => {
         user: req.user
     });
 });
+
+routes.get('/editAdvert/:id', [isLoggedIn, getAdvert], (req, res) => {
+    const user = req.user;
+    const advert = req.advert;
+    if (advert) {
+        res.render('edit-advert', {
+            user,
+            advert
+        });
+    } else {
+        res.redirect('/login');
+    }
+});
+
+routes.post('/editAdvert/:id', [isLoggedIn, updateAdvert], (req, res) => {
+    const user = req.user;
+    const advert = req.advert;
+    if (advert) {
+        res.render('edit-advert', {
+            user,
+            advert
+        });
+    } else {
+        res.render('/login');
+    }
+});
+
+routes.get('/deleteAdvert/:id', deleteAdvert);
 
 export default routes;

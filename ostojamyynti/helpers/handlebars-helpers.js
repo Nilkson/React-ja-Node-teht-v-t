@@ -32,8 +32,15 @@ let hbsHelpers = {
         return user;
     },
     reverseList: (list) => {
-        let reversedList = list.reverse()
-            return reversedList
+        let reversedList = list.reverse();
+        return reversedList;
+    },
+    isEmpty: (searchAdvert) => {
+        let isEmptyBoolean = false;
+        if (searchAdvert) {
+            isEmptyBoolean = true;
+        }
+        return isEmptyBoolean;
     }
 }
 
