@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lilliputin laatulaatoitus</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+  <style>
+    html,
+    body {
+      margin: 0px;
+      padding: 0px;
+      overflow-x: hidden;
+      font-family: "Lato", sans-serif;
+    }
+
+    .section-navbar-header {
+      background-size: cover;
+      background-image: url("assets/images/top-bg.png");
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.65);
+      background-blend-mode: soft-light;
+    }
+
+    .section-header {
+      min-height: 550px;
+    }
+
+    .section-footer {
+      background-size: cover;
+      background-image: url("assets/images/top-bg.png");
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.65);
+      background-blend-mode: soft-light;
+      min-height: 350px;
+    }
+
+    .red-container-left {
+      background:
+        linear-gradient(rgba(129, 0, 0, 0.75),
+          rgba(129, 0, 0, 0.75)),
+          url("assets/images/red-left.jpg");
+    }
+
+    .red-container-center {
+      background:        
+        linear-gradient(rgba(129, 0, 0, 0.75),
+          rgba(129, 0, 0, 0.75)),
+          url("assets/images/red-center.jpg");
+    }
+
+    .red-container-right {
+      background:
+        linear-gradient(rgba(129, 0, 0, 0.75),
+          rgba(129, 0, 0, 0.75)),
+          url("assets/images/red-right.jpg");
+    }
+
+    .red-container-left:hover,
+    .red-container-center:hover,
+    .red-container-right:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    .about,
+    .contact {
+      background-color: rgb(83, 77, 77, 0.15);
+    }
+
+    .nav-link {
+      color: white;
+    }
+
+    .nav-link:hover {
+      color: red;
+    }
+
+    .logo {
+      max-height: 80px;
+    }
+
+    #current a {
+      color: red;
+    }
+
+    .header-text {
+      font-weight: lighter;
+      font-style: italic;
+    }
+
+    .red-img-opacity {
+      opacity: 0.35;
+    }
+
+    .red-container {
+      background-color: rgba(129, 0, 0, 0.3);
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .red-centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .fadein col:hover {
+      opacity: 0.65;
+      transition: 1s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <section class="section-navbar-header">
+      <section class="section-navbar">
+        <nav class="navbar navbar-expand-lg">
+          <img class="logo" src="assets/images/logo.png" alt="company logo" />
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText" style="font-weight: bolder; font-size: 1.2em">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item" id="current">
+                <a class="nav-link" href="#">Etusivu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Palvelut</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">Tietoa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#references">Referenssit</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Yhteystiedot</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+      <section class="section-header py-3">
+        <div class="container-fluid">
+          <div class="row" style="min-height: 68vh">
+            <div class="col-lg-6 m-auto text-center">
+              <div class="col-lg-6 m-auto">
+              </div>
+            </div>
+            <div class="col-lg-6 m-auto text-center">
+              <div class="col-lg-6 m-auto text-light">
+                <h2 class="header-text">
+                  <i class="fa fa-quote-left mr-3 text-danger"></i>Laatu ei ole
+                  koskaan sattumaa. Se syntyy aina korkeista tavoitteista,
+                  vilpittömästä yrityksestä, järkevästä suunnasta ja
+                  taidokkaasta toteutuksesta - se edustaa monien vaihtoehtojen
+                  keskellä tiettyä viisasta päätöstä.
+                  <i class="fa fa-quote-right mr-3 text-danger"></i>
+                  <span class="text-danger"><br /><br />William A. Foster</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </header>
+  <main>
+    <section id="services">
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-lg-4 red-container-left" onclick="location.href='#';" style="min-height: 300px">
+            <div class="red-centered">
+              <h2 class="text-light">Keittiöremontit</h2>
+              <br />
+              <h5 class="text-light">Nopesti ja vaivattomasti!</h5>
+            </div>
+          </div>
+          <div class="col-lg-4 red-container-center" onclick="location.href='#';" style="min-height: 300px">
+            <div class="red-centered">
+              <h2 class="text-light">Kylpyhuoneremontit</h2>
+              <br />
+              <h5 class="text-light">
+                Avaimet käteen remontti. Purkutyöt, pohjatöyt, vedeneristys,
+                laatoitus, saumaus ja silikonit! Laatoitukselle elinikäinen
+                asennustakuu!
+              </h5>
+            </div>
+          </div>
+          <div class="col-lg-4 red-container-right" onclick="location.href='#';" style="min-height: 300px">
+            <div class="red-centered">
+              <h2 class="text-light">Suunnittelu</h2>
+              <br />
+              <h5 class="text-light">
+                Suunnittelen keittiö- ja kylpyhuoneremontit vuosien
+                kokemuksella.
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section class="section-footer py-3">
+      <div class="row m-5 p-5">
+        <div class="col-6 mx-auto my-auto text-center">
+          <h1 class="text-light">Kurkkaa lisää tarinoita somesta</h1>
+          <br />
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-linkedin-square fa-5x text-light" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </footer>
+</body>
+</html>
